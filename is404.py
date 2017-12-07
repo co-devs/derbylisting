@@ -17,6 +17,7 @@ def goodURL(url):
     else:
         return str(url).strip('\n') + ' exists'
 
+
 def questionURL(url):
     if args.test:
         return '-1'
@@ -87,7 +88,7 @@ if __name__ == "__main__":
     elif args.file:
         try:
             f = open(args.file, "r")
-        except:
+        except Exception:
             print("Invalid file")
             raise SystemExit
         urls = f.readlines()
